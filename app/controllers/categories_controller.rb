@@ -22,7 +22,7 @@ class CategoriesController < ApplicationController
   end
 
   def update
-    if category.update(secure_params)
+    if @category.update(secure_params)
       redirect_to categories_url, notice: t('.updated')
     else
       render :edit, status: :unprocessable_entity
@@ -30,7 +30,7 @@ class CategoriesController < ApplicationController
   end
 
   def destroy
-    category.destroy
+    @category.destroy
 
     redirect_to categories_url, notice: t('.destroyed')
   end

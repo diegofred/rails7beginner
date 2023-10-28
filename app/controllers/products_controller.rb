@@ -35,7 +35,7 @@ class ProductsController < ApplicationController
 
   def destroy
     @product.destroy
-    redirect_to products_path, notice: t('destroyed'), status: :see_other
+    redirect_to products_path, notice: t('.destroyed'), status: :see_other
   end
 
   def edit; end
