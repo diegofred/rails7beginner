@@ -28,6 +28,95 @@
 #
 # To learn more, please read the Rails Internationalization guide
 # available at https://guides.rubyonrails.org/i18n.html.
-
 en:
-  hello: "Hello world"
+  products:
+    index:
+      title: "Products"
+      description: "List of products"
+    show:
+      title: "Product"
+      description: "Product details"
+      edit: "Edit"
+      destroy: "Delete"
+    new:
+      title: "New product"
+      description: "Create a new product"
+    edit:
+      title: "Edit product"
+      description: "Edit an existing product"
+    destroy:
+      title: "Delete product"
+      description: "Delete an existing product"
+      destroyed: "Product was successfully destroyed."
+    create:
+      created: "Product was successfully created."
+    update:
+      updated: "Product was successfully updated."
+  categories:
+    category:
+      edit: 'Edit'
+      delete: 'Delete'
+    index:
+      title: 'Categories'
+      new: 'Add category'
+    edit:
+      title: 'Edit category'
+    create:
+      created: 'Your category has been successfully created'
+    update:
+      updated: 'Your category has been successfully updated'
+    destroy:
+      destroyed: 'Your category has been successfully destroyed'
+    new:
+      title: 'New category'
+  common:
+    confirm: 'Are you sure?'
+    back: 'Go back'
+    actions:
+      new: "New"
+      edit: "Edit"
+      destroy: "Delete"
+      back: "Back"
+      save: "Save"
+      cancel: "Cancel"
+      show: "Show"
+      index: "List"
+    errors:
+      prohibited: "There were {{count}} errors with this {{resource}}:"
+      prohibited_one: "There was 1 error with this {{resource}}:"
+      required: "can't be blank"
+      invalid: "is invalid"
+      taken: "has already been taken"
+      too_short: "is too short (minimum is {{count}} characters)"
+      too_long: "is too long (maximum is {{count}} characters)"
+      not_a_number: "is not a number"
+      not_an_integer: "must be an integer"
+      greater_than: "must be greater than {{count}}"
+      greater_than_or_equal_to: "must be greater than or equal to {{count}}"
+      equal_to: "must be equal to {{count}}"
+      less_than: "must be less than {{count}}"
+      less_than_or_equal_to: "must be less than or equal to {{count}}"
+      odd: "must be odd"
+      even: "must be even"
+      record_invalid: "Validation failed: {{errors}}"
+      confirmation: "doesn't match {{attribute}}"
+      accepted: "must be accepted"
+      empty: "can't be empty"
+      blank: "can't be blank"
+      present: "must be blank"
+      collection: "must be a collection"
+      singular: "can't be a collection"
+      too_few: "is too few (minimum is {{count}} items)"
+      too_many: "is too many (maximum is {{count}} items)"
+      before: "must be before {{time}}"
+      after: "must be after {{time}}"
+      wrong_length: "is the wrong length (should be {{count}} characters)"
+      not_a_phone_number: "is not a phone number"
+      not_an_email: "is not an email"
+      not_a_url: "is not a URL"
+      not_an_ip_address: "is not an IP address"
+      not_a_date: "is not a date"
+      not_a_time: "is not a time"
+      not_a_datetime: "is not a datetime"
+      not_a_valid_date: "is not a valid date"
+      not_a_valid_time: "is not a valid time"
