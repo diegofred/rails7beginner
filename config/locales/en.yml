@@ -33,6 +33,7 @@ en:
     index:
       title: "Products"
       description: "List of products"
+      all: "All"
     show:
       title: "Product"
       description: "Product details"

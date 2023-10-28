@@ -2,7 +2,11 @@ class ProductsController < ApplicationController
   before_action :set_product, except: %i[new create index]
 
   def index
-    @products = Product.all.with_attached_photo
+    @categories = Category.order(name: :asc).load_async
+    @products = Product.with_attached_photo.order(created_at: :desc).load_async
+    if params[:category_id]
+      @products = @products.where(category_id: params[:category_id])
+    end
   end
 
   def show; end
@@ -43,6 +47,6 @@ class ProductsController < ApplicationController
   end
 
   def secure_params
-    params.require(:product).permit(:title, :description, :price, :photo)
+    params.require(:product).permit(:title, :description, :price, :photo, :category_id)
   end
 end
