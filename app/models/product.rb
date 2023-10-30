@@ -10,6 +10,12 @@ class Product < ApplicationRecord
     tsearch: { prefix: true } # Use the trigram index method
   }
 
+  ORDER_BY = {
+    newest: "created_at DESC",
+    expensive: "price DESC",
+    cheapest: "price ASC"
+  }
+
   validates :title, presence: true
   validates :description, presence: true
   validates :price, presence: true
