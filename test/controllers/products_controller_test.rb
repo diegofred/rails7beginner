@@ -94,4 +94,20 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to products_path
     assert_equal flash[:notice], I18n.t('products.destroy.destroyed')
   end
+
+  test 'render a list of products filtered by min_price and max_price' do
+    get products_path(min_price: 160, max_price: 200)
+
+    assert_response :success
+    assert_select '.product', 1
+    assert_select 'h2', 'Nintendo Switch'
+  end
+
+  test 'search a product by query_text' do
+    get products_path(query_text: 'Switch')
+
+    assert_response :success
+    assert_select '.product', 1
+    assert_select 'h2', 'Nintendo Switch'
+  end
 end
