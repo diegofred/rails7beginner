@@ -29,6 +29,12 @@
 # To learn more, please read the Rails Internationalization guide
 # available at https://guides.rubyonrails.org/i18n.html.
 en:
+  app_name: 'SellIt'
+  meta_title: 'Buy and sell second-hand products'
+  authentication:
+    users:
+      create:
+        created: 'Your account has been created!'
   products:
     index:
       title: "Products"
