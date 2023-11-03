@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-  #around_action :switch_locale
+  # around_action :switch_locale
   include Pagy::Backend
 
   def switch_locale(&action)
