@@ -1,5 +1,6 @@
 class ProductsController < ApplicationController
   before_action :set_product, except: %i[new create index]
+  skip_before_action :authenticate_user, only: [:index, :show]
 
   def index
     @categories = Category.order(name: :asc).load_async

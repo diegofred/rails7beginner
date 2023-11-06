@@ -87,6 +87,7 @@ en:
     new:
       title: 'New category'
   common:
+    not_logged_in: 'You have to login or create an account'
     confirm: 'Are you sure?'
     back: 'Go back'
     actions:
