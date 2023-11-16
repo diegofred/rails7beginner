@@ -31,6 +31,30 @@
 en:
   app_name: 'SellIt'
   meta_title: 'Buy and sell second-hand products'
+  shared:
+    header:
+      add: 'Add product'
+      login: 'Login'
+      register: 'Register'
+      logout: 'Logout'
+  activerecord:
+    models:
+      product: Product
+      user: User
+      category: Category
+    attributes:
+      product:
+        name: Name
+        description: Description
+        price: Price
+        category: Category
+        user: User
+      user:
+        email: Email
+        password: Password
+        password_confirmation: Password confirmation
+      category:
+        name: Name
   authentication:
     users:
       create:
@@ -39,6 +63,8 @@ en:
       create:
         created: 'Welcome!'
         failed: 'Invalid login!'
+      destroy:
+        destroyed: 'You have been logged out!'
   products:
     index:
       title: "Products"

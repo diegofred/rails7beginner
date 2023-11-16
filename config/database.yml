@@ -4,8 +4,8 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-  user: diego
-  password: <%= ENV['Store_DATABASE_PASSWORD'] || 123456 %>
+  user: my-leniolabs
+  password: <%= ENV['Store_DATABASE_PASSWORD'] || 'my-leniolabs' %>
   # For details on connection pooling, see Rails configuration guide
   # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>

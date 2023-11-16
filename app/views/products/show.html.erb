@@ -1,11 +1,11 @@
 <% if @product.photo.attached? %>
-  <%= image_tag @product.photo, width: 100 %> 
+  <%= image_tag @product.photo, width: 100 %>
 <% end %>
 <h1 class='title'><%= @product.title %></h1>
 <p  class='description'> <%= @product.description %></p>
 <span class='price'><%= @product.price %>$</span>
-<%= link_to t('.edit'), edit_product_path(@product) %>
+<%= link_to t('.edit'), edit_product_path(@product) if @product.user == Current.user %>
 <%= link_to t('.delete'), product_path(@product), data: {
   turbo_method: :delete,
   turbo_confirm: 'Are you sure?'
-} %>
+} if @product.user == Current.user %>
