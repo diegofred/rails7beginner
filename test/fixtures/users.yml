@@ -4,6 +4,7 @@ diego:
   email: diego@shellit.com
   username: diego123
   password_digest: <%= BCrypt::Password.create('testme', cost: 5) %>
+  admin: true
 
 steve:
   email: steve@shellit.com
