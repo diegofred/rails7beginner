@@ -12,6 +12,6 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
   resources :products, path: '/'
-
+  resources :users, only: :show, path: '/user', param: :username
 
 end

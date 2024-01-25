@@ -81,6 +81,7 @@ en:
       description: "Product details"
       edit: "Edit"
       destroy: "Delete"
+      view_more_products: 'View more products by %{username}'
     new:
       title: "New product"
       description: "Create a new product"
@@ -117,6 +118,7 @@ en:
     not_authorized: 'You don not have permissions for this action'
     confirm: 'Are you sure?'
     back: 'Go back'
+    not_found: 'Not found'
     actions:
       new: "New"
       edit: "Edit"
