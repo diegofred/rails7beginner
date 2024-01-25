@@ -1,8 +1,11 @@
 class Product < ApplicationRecord
   include PgSearch::Model
+  include Favoritable
   has_one_attached :photo
   belongs_to :category
   belongs_to :user, default: -> { Current.user }
+  has_many :favorites, dependent: :destroy
+  has_many :favorited_users, through: :favorites, source: :user
 
   pg_search_scope :search_full_text, against: {
     title: 'A',

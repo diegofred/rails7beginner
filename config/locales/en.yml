@@ -37,6 +37,7 @@ en:
       login: 'Login'
       register: 'Register'
       logout: 'Logout'
+      favorites: 'My favorites'
   activerecord:
     models:
       product: Product
@@ -96,6 +97,9 @@ en:
       created: "Product was successfully created."
     update:
       updated: "Product was successfully updated."
+  favorites:
+    index:
+      title: 'My favorites'
   categories:
     category:
       edit: 'Edit'
