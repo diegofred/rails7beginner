@@ -1,5 +1,5 @@
 <%= link_to products_path do %>
-  <h1>My Store</h1>
+  <h1 class="text-red-400 pt-4 hover:text-blue-400 animate-bounce dark:text-white">My Store</h1>
 <% end %>
 <%= link_to 'Add Product', new_product_path  if Current.user%>
 <%= link_to t('.categories'), categories_path if Current.user %>
