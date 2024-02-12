@@ -1,14 +1,28 @@
 class FavoritesController < ApplicationController
 
     def create
-        Favorite.create(product: product, user: Current.user)
-        redirect_to product_path(product)
+        product.favorite!
+        respond_to do |format|
+          format.html do
+            redirect_to product_path(product)
+          end
+          format.turbo_stream do
+            render turbo_stream: turbo_stream.replace("favorite", partial: "products/favorite", locals: { product: product })
+          end
+        end
     end
 
 
-   def destroy
-      product.unfavorite!
-        redirect_to product_path(product), status: :see_other
+    def destroy
+        product.unfavorite!
+        respond_to do |format|
+            format.html do
+                redirect_to product_path(product), status: :see_other
+            end
+            format.turbo_stream do
+                render turbo_stream: turbo_stream.replace("favorite", partial: "products/favorite", locals: { product: product })
+            end
+        end
     end
   
     def index
@@ -18,7 +32,7 @@ class FavoritesController < ApplicationController
     private
 
     def product
-        @product ||= Product.find(params[:product_id])
+        @product ||= Product.find(params[:product_id] || params[:id])
     end
 
     def product_params_index
