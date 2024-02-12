@@ -1,0 +1,22 @@
+#!/usr/bin/env sh
+
+# Load asdf if not already loaded
+. ~/.asdf/asdf.sh
+# Set the Ruby version
+asdf local ruby 3.2.2
+asdf reshim ruby 
+
+if ! gem list foreman -i --silent; then
+  echo "Installing foreman..."
+  gem install foreman
+fi
+
+# Default to port 3000 if not specified
+export PORT="${PORT:-3001}"
+
+# Let the debug gem allow remote connections,
+# but avoid loading until `debugger` is called
+export RUBY_DEBUG_OPEN="true"
+export RUBY_DEBUG_LAZY="true"
+
+exec foreman start -f Procfile.dev "$@"
