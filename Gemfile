@@ -73,6 +73,7 @@ group :test do
   gem 'capybara'
   gem 'selenium-webdriver'
   gem 'webdrivers'
+  gem 'webmock'
 end
 
 gem 'pagy', '~> 6.1'
@@ -82,3 +83,5 @@ gem "tailwindcss-rails", "~> 2.3"
 gem "view_component", "~> 3.10"
 
 gem "letter_opener", "~> 1.9"
+
+gem "sidekiq", "~> 7.2"

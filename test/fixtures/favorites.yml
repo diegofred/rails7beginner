@@ -1,7 +1,7 @@
 paco_switch:
-  user: paco
+  user: diego
   product: switch
 
 maria_driver:
-  user: maria
+  user: diego
   product: driver2

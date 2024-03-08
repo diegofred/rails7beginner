@@ -22,5 +22,8 @@ module Mystore
 
     # lenguage by default
     config.i18n.default_locale = :en
+
+    # Background job
+    config.active_job.queue_adapter = :sidekiq
   end
 end
